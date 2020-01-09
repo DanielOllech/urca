@@ -12,9 +12,9 @@ ur.ers <- function(y, type=c("DF-GLS", "P-test"), model=c("constant", "trend"), 
   idx <- 2:lag.max
   y <- na.omit(as.vector(y))
   nobs <- length(y)
-  if(nobs < 50){
+   if(nobs <= 75){
     rowsel <- 1
-  }else if(nobs < 100){
+  }else if(nobs <= 150){
     rowsel <- 2
   }else if(nobs <= 200){
     rowsel <- 3
